@@ -1,0 +1,32 @@
+/* Estilos globais da aplicação */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  app-book-list, app-favorites {
+    width: 45%;
+  }
+  

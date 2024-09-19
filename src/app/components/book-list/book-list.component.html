@@ -1,0 +1,7 @@
+<input type="text" placeholder="Search by title or author" (input)="searchBooks($event.target.value)">
+<div *ngFor="let book of books">
+  <img [src]="book.volumeInfo.imageLinks?.thumbnail" alt="Book Cover">
+  <h3>{{ book.volumeInfo.title }}</h3>
+  <p>{{ book.volumeInfo.authors?.join(', ') }}</p>
+  <button (click)="favoriteBook(book)">Favorite</button>
+</div>

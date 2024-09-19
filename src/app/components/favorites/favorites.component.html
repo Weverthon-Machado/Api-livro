@@ -1,0 +1,9 @@
+<div *ngFor="let fav of favorites$ | async; let i = index">
+    <h3>{{ fav.book.volumeInfo.title }}</h3>
+    <p>Notes: <input [(ngModel)]="fav.notes"></p>
+    <p>Rating: <input type="number" [(ngModel)]="fav.rating" min="1" max="5"></p>
+    <p>Tags: <input [(ngModel)]="fav.tags"></p>
+    <button (click)="editFavorite(i, fav.notes, fav.rating, fav.tags)">Save</button>
+  </div>
+  <input type="text" placeholder="Filter by tag" (input)="filterFavorites($event.target.value)">
+  
